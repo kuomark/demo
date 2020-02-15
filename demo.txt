@@ -1,0 +1,7 @@
+  resp.encoding = 'utf-8'
+    raw_html = resp.text
+    performance_list = []
+    soup = BeautifulSoup(raw_html, 'html.parser')
+    input2 = soup.select('body > div.page-wrapper > main > div:nth-child(5) > table > tbody > tr:nth-child(8) > td:nth-child(2)')[0].text
+    output2=soup.select('body > div.page-wrapper > main > div:nth-child(5) > table > tbody > tr:nth-child(8) > td:nth-child(3)')[0].text
+    soup_result='日圓買入匯率:'+input2+','+'賣出匯入:'+output2
